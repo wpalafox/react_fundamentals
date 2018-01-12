@@ -1,0 +1,110 @@
+								Notes for React Fundamentals
+
+
+Composition
+	
+	Intro
+		
+		Take a piece of the application and wrap it up into its own isolated container 
+
+		<Map />   <Slider />    <Date />  
+
+		Think of the idea of separating your components, then composing your 
+		components together.  
+
+
+
+	Imperative vs Declarative
+
+		Imperative (How)
+		
+		1)
+			var numbers = [1,2,4]
+			var total = 0
+			for (var i = 0; i < numbers.length; i++){
+				total += numbers[i]
+			}
+		2)
+			$( "#tylers-btn").click(function(){
+				$(this).toggleClass( "highlight")
+				$(this).text() === 'Add Highlight'
+					? $(this).text('Remove Highlight')
+					: $(this).text('Add Highlight')
+			})
+
+
+
+
+
+
+
+
+		
+		Declarative (What)
+
+		1)
+			var numbers = [1,2,4]
+			numbers.reduce(function(previous, current)
+				return previous + current 
+			})
+
+		2)
+
+			<TylersBtn
+				onClick={this.handleToggleHighlight}
+				highlight={this.state.highlight} />
+
+			Instead of having the state live in the DOM we have it live in 
+			a component somewhere 
+
+			Is React Declarative ? 
+			For the most part 
+
+			this.setState)({
+				highlight: !this.state.highlight 
+
+			})
+
+
+		Benefits of Declarative Programming 
+		-Reduces Side Effects 
+		-Minmimize Mutability 
+		-More readable code
+		-Less Bugs
+
+
+Unidirectional Dataflow
+
+	Intro
+		Main purpose of React- managing state inside of your application
+
+Explicit Mutation
+
+	this.setState({
+		highlight: !this.state.highlight,
+	})
+
+
+Just JavaScript
+
+
+	<ul>
+		{friends.map(function(name) {
+			return (
+				<li>
+					{name}
+				</li>
+
+
+
+			)
+		})}
+	</ul
+
+
+
+
+	REact Router 
+
+
+	WebPack
