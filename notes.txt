@@ -108,3 +108,31 @@ Just JavaScript
 
 
 	WebPack
+
+
+
+Imperative Examples 
+
+
+		arr = [1,2,3];
+
+
+
+		function double (arr) {
+		  let results = []
+		  for (let i = 0; i < arr.length; i++){
+		    results.push(arr[i] * 2)
+		  }
+		  return results
+		}
+
+		double(arr);
+
+		(3) [2, 4, 6]
+
+
+
+
+
+
+
